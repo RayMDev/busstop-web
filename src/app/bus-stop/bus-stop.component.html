@@ -1,0 +1,23 @@
+<div class="dashed">BUS STOP INFORMATION:</div>
+
+<div *ngIf="stop1ArrivalTimes.length === 0 || stop2ArrivalTimes.length === 0">
+    ....waiting to load infos for next minute. Bus-Stop Services may not be available !!!
+</div>
+
+<div *ngIf="stop1ArrivalTimes.length > 0">
+    <span><strong>Stop 1:</strong></span>
+    <li *ngFor="let item1 of stop1ArrivalTimes">
+        <span>Route {{item1.route}} in <span class="spanFormat">{{item1.firstNextArrivalTime}}</span> mins and <span
+                class="spanFormat">{{item1.secondNextArrivalTime}}</span> mins </span>
+    </li>
+</div>
+
+<br />
+
+<div *ngIf="stop2ArrivalTimes.length > 0">
+    <span><strong>Stop 2:</strong></span>
+    <li *ngFor="let item2 of stop2ArrivalTimes">
+        <span>Route {{item2.route}} in <span class="spanFormat">{{item2.firstNextArrivalTime}}</span> mins and <span
+                class="spanFormat">{{item2.secondNextArrivalTime}}</span> mins </span>
+    </li>
+</div>

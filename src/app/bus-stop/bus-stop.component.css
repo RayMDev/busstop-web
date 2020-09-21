@@ -1,0 +1,15 @@
+.spanFormat
+{
+    color: green;
+    font-weight: bold;
+}
+
+div.dashed 
+{
+    color: green;
+    width: max-content;
+    border-style: dashed;
+    font-weight: bold;
+    margin: 10px;
+    padding: 7px;
+}
